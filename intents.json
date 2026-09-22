@@ -1,5 +1,5 @@
 {
-  "intents": [
+  "intents": [   
     {
       "tag": "greeting",
       "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon", "Is anyone there?"],
@@ -58,6 +58,12 @@
       "tag": "exams",
       "patterns": ["Where can I find the exam schedule?", "When are the exams?", "I need exam information", "How can I check my examination schedule?"],
       "responses": ["Please check the student portal and the latest official academic announcements for your examination schedule."],
+      "context": [""]
+    },
+    {
+      "tag": "hot_water",
+      "patterns": ["i wanna use hot water!","how can i use hot water?"],
+      "responses": ["Please check the PDF that university sent to the group."],
       "context": [""]
     },
     {
