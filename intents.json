@@ -1,75 +1,112 @@
-{"intents": [
-        {
-         "tag": "greeting",
-
-         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-         "context": [""]
-        },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-         "context": [""]
-        },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure"],
-         "context": [""]
-        },
-        {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-         "context": [""]
-        },
-        {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
-         "context": [""]
-        },
-        {"tag": "adverse_drug",
-         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-         "responses": ["Navigating to Adverse drug reaction module"],
-         "context": [""]
-        },
-        {"tag": "blood_pressure",
-         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
-         "responses": ["Navigating to Blood Pressure module"],
-         "context": [""]
-        },
-        {"tag": "blood_pressure_search",
-         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
-         "responses": ["Please provide Patient ID", "Patient ID?"],
-         "context": ["search_blood_pressure_by_patient_id"]
-        },
-        {"tag": "search_blood_pressure_by_patient_id",
-         "patterns": [],
-         "responses": ["Loading Blood pressure result for Patient"],
-         "context": [""]
-        },
-        {"tag": "pharmacy_search",
-         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
-         "responses": ["Please provide pharmacy name"],
-         "context": ["search_pharmacy_by_name"]
-        },
-        {"tag": "search_pharmacy_by_name",
-         "patterns": [],
-         "responses": ["Loading pharmacy details"],
-         "context": [""]
-        },
-        {"tag": "hospital_search",
-         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-         "responses": ["Please provide hospital name or location"],
-         "context": ["search_hospital_by_params"]
-        },
-        {"tag": "search_hospital_by_params",
-         "patterns": [],
-         "responses": ["Please provide hospital type"],
-         "context": ["search_hospital_by_type"]
-        },
-        {"tag": "search_hospital_by_type",
-         "patterns": [],
-         "responses": ["Loading hospital details"],
-         "context": [""]
-        }
-   ]
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon", "Is anyone there?"],
+      "responses": ["Hello! How can I help you with your university questions?", "Hi! What would you like to know about SCUT?"],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you later", "Talk to you later"],
+      "responses": ["Goodbye!", "Have a great day!"],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That is helpful", "Thanks for your help"],
+      "responses": ["You are welcome!", "Happy to help."],
+      "context": [""]
+    },
+    {
+      "tag": "capabilities",
+      "patterns": ["What can you help me with?", "What can you do?", "What information do you provide?", "How can you help students?"],
+      "responses": ["I can help you find information about admissions, academic affairs, courses, exams, campus services, student services, and university contacts."],
+      "context": [""]
+    },
+    {
+      "tag": "university_information",
+      "patterns": ["Tell me about the university", "What is SCUT?", "Where can I find university information?", "I need general information about SCUT"],
+      "responses": ["You can find official information about South China University of Technology at https://www.scut.edu.cn/en/."],
+      "context": [""]
+    },
+    {
+      "tag": "student_portal",
+      "patterns": ["How do I access the student portal?", "Where is the student portal?", "Open the student portal", "I need the student portal"],
+      "responses": ["You can access the student portal at http://my.scut.edu.cn."],
+      "context": [""]
+    },
+    {
+      "tag": "admissions",
+      "patterns": ["How can I apply to SCUT?", "Where can I find admission information?", "I want to apply to the university", "What are the admission requirements?", "Tell me about admissions"],
+      "responses": ["Please check the official SCUT website for the latest admission requirements and application instructions: https://www.scut.edu.cn/en/."],
+      "context": [""]
+    },
+    {
+      "tag": "academic_affairs",
+      "patterns": ["Where can I find academic information?", "I need academic affairs information", "How can I contact academic affairs?", "Tell me about academic services"],
+      "responses": ["Please use the official SCUT website or the student portal for current academic affairs information."],
+      "context": [""]
+    },
+    {
+      "tag": "course_registration",
+      "patterns": ["How do I register for courses?", "Where can I register for a course?", "I want to choose my courses", "How can I add or drop a course?", "Course registration information"],
+      "responses": ["Course registration is handled through the student portal. Please check the current academic notice before registering."],
+      "context": [""]
+    },
+    {
+      "tag": "exams",
+      "patterns": ["Where can I find the exam schedule?", "When are the exams?", "I need exam information", "How can I check my examination schedule?"],
+      "responses": ["Please check the student portal and the latest official academic announcements for your examination schedule."],
+      "context": [""]
+    },
+    {
+      "tag": "tuition",
+      "patterns": ["How much is the tuition fee?", "Where can I find tuition information?", "How do I pay my tuition?", "I need fee information", "Tell me about tuition"],
+      "responses": ["Tuition fees and payment instructions may vary by program. Please check the latest official university notice or contact the relevant office."],
+      "context": [""]
+    },
+    {
+      "tag": "campus_services",
+      "patterns": ["What services are available on campus?", "Where can I find campus services?", "I need student services", "Tell me about campus facilities"],
+      "responses": ["For official campus services and facilities, please visit https://www.scut.edu.cn/en/."],
+      "context": [""]
+    },
+    {
+      "tag": "email",
+      "patterns": ["How do I access my university email?", "Where is the university mailbox?", "Open my student email", "I need university email"],
+      "responses": ["You can access the SCUT webmail service at https://webmail.scut.edu.cn/."],
+      "context": [""]
+    },
+    {
+      "tag": "it_services",
+      "patterns": ["I need technical support", "Where can I find information services?", "How do I contact IT support?", "I have a university system problem"],
+      "responses": ["For information services and technical support, please visit http://web.scut.edu.cn/."],
+      "context": [""]
+    },
+    {
+      "tag": "Shuttle Bus",
+      "patterns": ["How should i use shuttle bus", "Where can I find information about shuttle bus?", "How do I get to other campus?", "I have a transportation problem"],
+      "responses": ["For information about shuttle bus and technical support, please visit the mini program in the wechat, choose the shuttle bus and follow the process."],
+      "context": [""]
+    },
+    {
+      "tag": "news",
+      "patterns": ["What is the latest university news?", "Where can I read university news?", "Show me the latest news", "I need university announcements"],
+      "responses": ["You can read the latest official university news at http://news.scut.edu.cn."],
+      "context": [""]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["How can I contact the university?", "Where can I find contact information?", "I need a university contact", "How do I contact an office?"],
+      "responses": ["Please visit the official SCUT website at https://www.scut.edu.cn/en/ to find the appropriate university office or contact details."],
+      "context": [""]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": ["I do not know what to ask"],
+      "responses": ["I could not understand the question. Please ask about admissions, courses, exams, tuition, student services, or university contacts."],
+      "context": [""]
+    }
+  ]
 }
