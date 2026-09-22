@@ -6,13 +6,6 @@
          "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
          "context": [""]
         },
-        {
-                "tag": "aiolearn",
-       
-                "patterns": ["what is aiolearn?", "aiolearn", "aiolearn academy?","academy","the best programming and ai academy", "aiolearn?", "best academy in iran?"],
-                "responses": ["Aiolearn is a best academy in iran.", "Aiolearn academy is a programming and ai skill learning", "Aiolearn in IRAN."],
-                "context": [""]
-               },
         {"tag": "goodbye",
          "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
          "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],

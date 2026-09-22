@@ -193,7 +193,7 @@ def send():
 
 # Create the main window
 root = Tk()
-root.title("Aiolearn Chatbot")
+root.title("Python Chatbot")
 root.geometry("400x500")
 root.resizable(width=TRUE, height=TRUE)
 
